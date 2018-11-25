@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage[export]{adjustbox}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\setlength{\headheight}{14.5pt}
+\pagestyle{fancyplain}
+\lhead{\textbf{\NAME\ (\UID)}}
+\chead{\textbf{HW\HWNUM}}
+\rhead{CS 6140, \today}
+
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+\begin{document}\raggedright%
+
+\newcommand\NAME{Elliot Hatch}
+\newcommand\UID{u0790511}
+\newcommand\HWNUM{6}
+
+\section{Finding q*}
+
+\begin{enumerate}
+	\item
+
+		$q_*$ vectors:
+
+		\begin{tabular}{r | r | r | r}
+			Matrix Power & State Propegation & Random Walk & Eigen-Analysis \\
+			\hline
+			0.0358 & 0.0358 & 0.0361 & 0.0358 \\
+			0.0572 & 0.0572 & 0.0615 & 0.0572 \\
+			0.0581 & 0.0581 & 0.0712 & 0.0581 \\
+			0.0792 & 0.0792 & 0.0849 & 0.0792 \\
+			0.0858 & 0.0858 & 0.0976 & 0.0858 \\
+			0.0660 & 0.0660 & 0.0693 & 0.0660 \\
+			0.1579 & 0.1579 & 0.1571 & 0.1579 \\
+			0.1716 & 0.1716 & 0.1610 & 0.1716 \\
+			0.1373 & 0.1373 & 0.1288 & 0.1373 \\
+			0.1510 & 0.1510 & 0.1327 & 0.1510 \\
+		\end{tabular}
+
+	\item 
+		To determine the needed $t$ I try each $1\leq t \leq 2048$, and compute the error as $sum(abs(q_{*t}-q_{*1024}))$. I stop when the error in the current iteration is greater than the error in the last iteration.
+
+	Matrix Power:\\
+	t: 798\\
+	error: $2.4187*10^{-13}$
+
+	State Propegation:\\
+	t: 798\\
+	error: $2.4177*10^{-13}$
+
+	\item
+
+		\begin{enumerate}
+			\item Matrix Power:
+
+				Pro: Easy to compute when $t$ is a power of 2.\\
+				Con: Inaccuate when $t$ is small.\\
+
+			\item State Propegation:
+
+				Pro: Low memory overhead.\\
+				Con: Inaccuate when $t$ is small.
+
+			\item Random Walk:
+
+				Pro: Each step is very easy to compute, low memory overhead.\\
+				Con: Results have some variance due to inherent randomness.
+
+			\item Eigen-Analysis:
+
+				Pro: Very accurate, independent of $t$.\\
+				Con: Expensive to compute when $M$ has high dimensionality.
+		\end{enumerate}
+
+	\item
+		The chain is ergotic. Analyzing the structure of the graph we see that it is fully connected and there are no absorbing or transient states---all three of the highly
+		connected ``clusters'' in the graph have some edge out to another cluster. We can also see that the chain is aperiodic---although cycles can occur randomly, the graph
+		does not force a cyclical walk with a fixed period.
+
+		We can also see that $P^7$ has no non-zero entries, so all $P^n$ with $n \geq 7$ also contain no zero entries.
+	
+	\item The 4th column vector is $[0,0,0.3,0,0.3,0.4,0,0,0,0]$ so we have:
+
+		Node 3: 0.3\\
+		Node 5: 0.3\\
+		Node 6: 0.4\\
+\end{enumerate}
+
+\end{document}
