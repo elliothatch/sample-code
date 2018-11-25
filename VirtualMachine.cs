@@ -1,4 +1,5 @@
-﻿using System;
+﻿/* https://github.com/elliothatch/AMIL-Interpreter/blob/master/AMIL-Interpreter/VirtualMachine.cs */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

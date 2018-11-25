@@ -1,4 +1,4 @@
-//https://github.com/elliothatch/Insurgency/blob/master/Insurgency/EntityComponent.h
+// https://github.com/Fresh4Less/Neopixel-Display/blob/master/neopixeldisplay/ColorFrame.go
 package neopixeldisplay
 
 import(

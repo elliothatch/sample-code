@@ -1,4 +1,4 @@
-//https://raw.githubusercontent.com/team-worm/spice/master/client/app/components/debugger/debugger.component.ts
+// https://raw.githubusercontent.com/team-worm/spice/master/client/app/components/debugger/debugger.component.ts
 import {Component, QueryList, ViewChild, ViewChildren} from "@angular/core";
 import {Execution, FunctionData} from "../../models/Execution";
 import {LineData, Trace} from "../../models/Trace";

@@ -1,4 +1,4 @@
-//https://github.com/elliothatch/Insurgency/blob/master/Insurgency/GameEntity.h
+// https://github.com/elliothatch/Insurgency/blob/master/Insurgency/GameEntity.h
 #pragma once
 #include <map>
 #include <set>

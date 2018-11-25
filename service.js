@@ -1,4 +1,4 @@
-//https://raw.githubusercontent.com/Fresh4Less/mazenet/master/server/pages/service.js
+// https://raw.githubusercontent.com/Fresh4Less/mazenet/master/server/pages/service.js
 var Promise = require('bluebird');
 var ObjectID = require('mongodb').ObjectID;
 var CustomErrors = require('../util/custom-errors');

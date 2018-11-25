@@ -1,4 +1,4 @@
-//https://github.com/elliothatch/Insurgency/blob/master/Insurgency/GameEntity.cpp
+// https://github.com/elliothatch/Insurgency/blob/master/Insurgency/GameEntity.cpp
 #include "stdafx.h"
 #include "GameEntity.h"
 

@@ -1,3 +1,4 @@
+# https://github.com/elliothatch/RubyReviews/blob/master/app/controllers/products_controller.rb
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 

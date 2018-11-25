@@ -1,4 +1,4 @@
-//https://raw.githubusercontent.com/team-worm/spice/master/server/src/child.rs
+// https://raw.githubusercontent.com/team-worm/spice/master/server/src/child.rs
 ///! This module implements the core debug loop.
 ///!
 ///! It runs on its own thread, which is the only thread the Win32 API allows to call its debugging
